@@ -1,23 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Windows;
-
+/**
+ * @author Evencio Hernández
+ * @author Danny Caldeira
+ */
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import proyecto_pdyf.Proyecto_PDyF;
 
-/**
- *
- * @author Evencio
- */
 public class LoginInterface extends javax.swing.JFrame {
-    private Proyecto_PDyF mainClass;
+    private final Proyecto_PDyF mainClass;
     
     /**
      * Creates new form LoginInterface
+     * @param mainClass
      */
     public LoginInterface(Proyecto_PDyF mainClass) {
         this.mainClass = mainClass;
@@ -67,7 +62,7 @@ public class LoginInterface extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Sistema de Gestión de Casos");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 390, 30));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 400, 30));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));

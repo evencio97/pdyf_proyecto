@@ -24,7 +24,6 @@ public class User {
         try {
             Statement stmt = mainClass.db_conexion.createStatement();
             String query = "SELECT * FROM employees WHERE emp_ci="+ci;
-            Proyecto_PDyF.printToConsole(query);
             if (!stmt.execute(query)){
                 Proyecto_PDyF.print(null);
                 return;

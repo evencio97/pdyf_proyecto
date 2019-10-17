@@ -20,8 +20,8 @@ public class Proyecto_PDyF {
             Proyecto_PDyF mainClass = new Proyecto_PDyF();
             mainClass.start();
         } catch (Exception e){
-            Proyecto_PDyF.print(null);
-            e.printStackTrace();
+            print(null);
+            printToConsole("Exception: "+e);
         }
     }
     
@@ -34,7 +34,7 @@ public class Proyecto_PDyF {
         System.out.println(msg);
     }
     
-    public void conectToDB() {
+    public boolean conectToDB() {
         String database = "u887908225_pdyf";
         String hostname = "sql172.main-hosting.eu";
         String port = "3306";
@@ -47,14 +47,16 @@ public class Proyecto_PDyF {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(url, username, password);
-            Proyecto_PDyF.printToConsole("Conexion establecida con la base datos\n"
+            printToConsole("Conexion establecida con la base datos\n"
                     +"SMDB:"+conn.getMetaData().getDatabaseProductName()
                     +" version:"+conn.getMetaData().getDatabaseProductVersion());
         } catch (ClassNotFoundException | SQLException e) {
-            Proyecto_PDyF.print("No se pudo conectar con la base datos.");
-            Proyecto_PDyF.printToConsole("Exception: "+e);
+            print("No se pudo conectar con la base datos.");
+            printToConsole("Exception: "+e);
+            return false;
         }
         db_conexion = conn;
+        return true;
     }
     
     public void start(){
@@ -63,6 +65,10 @@ public class Proyecto_PDyF {
         //Mostramos loginInterface
         LoginInterface login = new LoginInterface(this);
         login.setVisible(true);
+    }
+    
+    public void exit(){
+        System.exit(0);
     }
     
     public void login(String ci, String password){
