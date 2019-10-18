@@ -18,7 +18,6 @@ public class DashboardInterface extends javax.swing.JFrame {
     public DashboardInterface(Proyecto_PDyF mainClass) {
         this.mainClass = mainClass;
         initComponents();
-        this.setIconImage (new ImageIcon(getClass().getResource("../Images/logo-100x100.png")).getImage());
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         username.setText(mainClass.getFullName());

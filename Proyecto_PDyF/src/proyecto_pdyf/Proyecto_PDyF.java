@@ -4,9 +4,6 @@ package proyecto_pdyf;
  * @author Evencio Hernández
  * @author Danny Caldeira
  */
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import Windows.*;
 
@@ -23,7 +20,8 @@ public class Proyecto_PDyF {
             Proyecto_PDyF mainClass = new Proyecto_PDyF();
             mainClass.start();
         } catch (Exception e){
-            print(null);
+            print(e.toString());
+            System.exit(0);
             printToConsole("Exception: "+e);
         }
     }

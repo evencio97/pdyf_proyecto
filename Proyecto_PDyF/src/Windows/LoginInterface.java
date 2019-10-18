@@ -5,7 +5,6 @@ package Windows;
  */
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import javax.swing.ImageIcon;
 import proyecto_pdyf.Proyecto_PDyF;
 
 public class LoginInterface extends javax.swing.JFrame {
@@ -18,7 +17,6 @@ public class LoginInterface extends javax.swing.JFrame {
     public LoginInterface(Proyecto_PDyF mainClass) {
         this.mainClass = mainClass;
         initComponents();
-        this.setIconImage(new ImageIcon(getClass().getResource("../Images/logo-100x100.png")).getImage());
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
@@ -38,16 +36,17 @@ public class LoginInterface extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         ciTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        passwordTextField = new javax.swing.JTextField();
+        passwordTextField = new javax.swing.JPasswordField();
         loginButton = new javax.swing.JButton();
         backgroundLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
         setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
-        setMinimumSize(new java.awt.Dimension(400, 600));
+        setMinimumSize(new java.awt.Dimension(300, 600));
+        setPreferredSize(new java.awt.Dimension(400, 600));
         setResizable(false);
-        setSize(new java.awt.Dimension(300, 600));
+        setSize(new java.awt.Dimension(400, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo-100x100.png"))); // NOI18N
@@ -84,8 +83,6 @@ public class LoginInterface extends javax.swing.JFrame {
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 260, 30));
 
         passwordTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        passwordTextField.setForeground(new java.awt.Color(102, 102, 102));
-        passwordTextField.setToolTipText("");
         passwordTextField.setMargin(new java.awt.Insets(5, 10, 5, 10));
         getContentPane().add(passwordTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 390, 260, -1));
 
@@ -117,7 +114,7 @@ public class LoginInterface extends javax.swing.JFrame {
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
         String ci = ciTextField.getText();
-        String password = passwordTextField.getText();
+        String password = new String(passwordTextField.getPassword());
         if (ci.length()==0){
             Proyecto_PDyF.print("Debe introducir la cedula de indentidad.");
             return;
@@ -138,6 +135,6 @@ public class LoginInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton loginButton;
     private javax.swing.JLabel logoLabel;
-    private javax.swing.JTextField passwordTextField;
+    private javax.swing.JPasswordField passwordTextField;
     // End of variables declaration//GEN-END:variables
 }
