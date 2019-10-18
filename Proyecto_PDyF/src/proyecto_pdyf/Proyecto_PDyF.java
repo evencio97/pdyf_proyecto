@@ -12,10 +12,8 @@ import Windows.*;
 
 public class Proyecto_PDyF {
     
-    public Connection db_conexion = null;
-    public EmployeModel user = null;
-    // Controllers
-    private EmployeController userController = null;
+    // CoarseGrainedObject
+    private EmployeCGO employeCGO = null;
     // Interfaces
     private LoginInterface login = null;
     private DashboardInterface dashboard = null;
@@ -39,34 +37,7 @@ public class Proyecto_PDyF {
         System.out.println(msg);
     }
     
-    public boolean conectToDB() {
-        String database = "u887908225_pdyf";
-        String hostname = "sql172.main-hosting.eu";
-        String port = "3306";
-        String url = "jdbc:mysql://" + hostname + ":" + port + "/" + database + "?useSSL=false&autoReconnect=true";
-        // Nombre de usuario
-        String username = "u887908225_pdyf";
-        // Clave de usuario
-        String password = "pdyf2019";
-        Connection conn = null;
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection(url, username, password);
-            printToConsole("Conexion establecida con la base datos\n"
-                    +"SMDB:"+conn.getMetaData().getDatabaseProductName()
-                    +" version:"+conn.getMetaData().getDatabaseProductVersion());
-        } catch (ClassNotFoundException | SQLException e) {
-            print("No se pudo conectar con la base datos.");
-            printToConsole("Exception: "+e);
-            return false;
-        }
-        db_conexion = conn;
-        return true;
-    }
-    
     public void start(){
-        conectToDB();
-        if (db_conexion == null) System.exit(0);
         //Mostramos loginInterface
         login = new LoginInterface(this);
         login.setVisible(true);
@@ -77,12 +48,19 @@ public class Proyecto_PDyF {
     }
     
     public void login(String ci, String password){
-        userController = new EmployeController(this);
-        user = userController.login(ci, password);
-        if (user != null){
+        employeCGO = new EmployeCGO();
+        if (employeCGO.login(ci, password)){
             login.setVisible(false);login.dispose();
             dashboard = new DashboardInterface(this);
             dashboard.setVisible(true);
         }
+    }
+    
+    public String getFullName(){
+        return employeCGO.getFullName();
+    }
+    
+    public String getType(){
+        return employeCGO.getType();
     }
 }

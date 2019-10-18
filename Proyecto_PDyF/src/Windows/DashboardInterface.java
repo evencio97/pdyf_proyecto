@@ -19,8 +19,8 @@ public class DashboardInterface extends javax.swing.JFrame {
         initComponents();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
-        username.setText(mainClass.user.getFullName());
-        usertype.setText(mainClass.user.getType());
+        username.setText(mainClass.getFullName());
+        usertype.setText(mainClass.getType());
     }
 
     /**
@@ -33,6 +33,8 @@ public class DashboardInterface extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        numberTextField = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         logoLabel = new javax.swing.JLabel();
         newUserButton = new javax.swing.JButton();
@@ -53,6 +55,18 @@ public class DashboardInterface extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Crear caso de investigación");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel5.setText("Cedula");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 260, 30));
+
+        numberTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numberTextField.setForeground(new java.awt.Color(102, 102, 102));
+        numberTextField.setToolTipText("");
+        numberTextField.setMargin(new java.awt.Insets(5, 10, 5, 10));
+        getContentPane().add(numberTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 260, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -181,10 +195,12 @@ public class DashboardInterface extends javax.swing.JFrame {
     private javax.swing.JButton exitButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JButton newCaseButton;
     private javax.swing.JButton newUserButton;
+    private javax.swing.JTextField numberTextField;
     private javax.swing.JLabel username;
     private javax.swing.JLabel usertype;
     // End of variables declaration//GEN-END:variables
