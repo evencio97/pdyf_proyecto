@@ -10,3 +10,7 @@ Cedula: 123123123
 password: leonardo.chacon
 
 Una vez autenticado sera dirigido a un un dashboard, el resto de funcionalidades de verdad no nos dio chance, lo lamentamos.
+
+
+Danny Caldeira Ci. 24900667
+Evencio Hernandez Ci. 26967771
