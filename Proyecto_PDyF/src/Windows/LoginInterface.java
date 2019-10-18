@@ -44,9 +44,9 @@ public class LoginInterface extends javax.swing.JFrame {
         setTitle("Login");
         setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         setMinimumSize(new java.awt.Dimension(400, 600));
-        setPreferredSize(new java.awt.Dimension(400, 600));
+        setPreferredSize(new java.awt.Dimension(300, 600));
         setResizable(false);
-        setSize(new java.awt.Dimension(400, 600));
+        setSize(new java.awt.Dimension(300, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         logoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/logo-100x100.png"))); // NOI18N
@@ -107,7 +107,9 @@ public class LoginInterface extends javax.swing.JFrame {
 
         backgroundLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         backgroundLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/fondo-login.png"))); // NOI18N
-        getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 600));
+        backgroundLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        backgroundLabel.setAlignmentY(0.0F);
+        getContentPane().add(backgroundLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

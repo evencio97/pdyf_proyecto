@@ -8,12 +8,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import Windows.LoginInterface;
+import Windows.*;
 
 public class Proyecto_PDyF {
     
     public Connection db_conexion = null;
-    private User user = null;
+    public EmployeModel user = null;
+    // Controllers
+    private EmployeController userController = null;
+    // Interfaces
+    private LoginInterface login = null;
+    private DashboardInterface dashboard = null;
     
     public static void main(String[] args) {
         try{
@@ -63,7 +68,7 @@ public class Proyecto_PDyF {
         conectToDB();
         if (db_conexion == null) System.exit(0);
         //Mostramos loginInterface
-        LoginInterface login = new LoginInterface(this);
+        login = new LoginInterface(this);
         login.setVisible(true);
     }
     
@@ -72,7 +77,12 @@ public class Proyecto_PDyF {
     }
     
     public void login(String ci, String password){
-        user = new User(this);
-        user.login(ci, password);
+        userController = new EmployeController(this);
+        user = userController.login(ci, password);
+        if (user != null){
+            login.setVisible(false);login.dispose();
+            dashboard = new DashboardInterface(this);
+            dashboard.setVisible(true);
+        }
     }
 }

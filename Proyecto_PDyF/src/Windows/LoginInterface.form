@@ -11,11 +11,11 @@
       <Dimension value="[400, 600]"/>
     </Property>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[400, 600]"/>
+      <Dimension value="[300, 600]"/>
     </Property>
     <Property name="resizable" type="boolean" value="false"/>
     <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[400, 600]"/>
+      <Dimension value="[300, 600]"/>
     </Property>
   </Properties>
   <SyntheticProperties>
@@ -195,10 +195,12 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/Images/fondo-login.png"/>
         </Property>
+        <Property name="verticalAlignment" type="int" value="1"/>
+        <Property name="alignmentY" type="float" value="0.0"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="0" y="0" width="400" height="600"/>
+          <AbsoluteConstraints x="0" y="0" width="600" height="600"/>
         </Constraint>
       </Constraints>
     </Component>
