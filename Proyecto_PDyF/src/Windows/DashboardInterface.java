@@ -35,10 +35,25 @@ public class DashboardInterface extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         numberTextField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        numberTextField1 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        numberTextField2 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        numberTextField3 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel11 = new javax.swing.JLabel();
+        numberTextField4 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        numberTextField5 = new javax.swing.JTextField();
+        newCaseButton1 = new javax.swing.JButton();
+        exitButton2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         logoLabel = new javax.swing.JLabel();
         newUserButton = new javax.swing.JButton();
-        exitButton1 = new javax.swing.JButton();
+        exitButton = new javax.swing.JButton();
         newCaseButton = new javax.swing.JButton();
         username = new javax.swing.JLabel();
         usertype = new javax.swing.JLabel();
@@ -54,19 +69,117 @@ public class DashboardInterface extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Crear caso de investigación");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 20, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel5.setText("Cedula");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 260, 30));
+        jLabel5.setText("Numero de caso");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 90, 220, 30));
 
         numberTextField.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         numberTextField.setForeground(new java.awt.Color(102, 102, 102));
         numberTextField.setToolTipText("");
         numberTextField.setMargin(new java.awt.Insets(5, 10, 5, 10));
-        getContentPane().add(numberTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, 260, -1));
+        getContentPane().add(numberTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 220, -1));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel6.setText("Investigador");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 90, 220, 30));
+
+        numberTextField1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numberTextField1.setForeground(new java.awt.Color(102, 102, 102));
+        numberTextField1.setToolTipText("");
+        numberTextField1.setMargin(new java.awt.Insets(5, 10, 5, 10));
+        getContentPane().add(numberTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 120, 220, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel7.setText("Tipo");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 220, 30));
+
+        numberTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numberTextField2.setForeground(new java.awt.Color(102, 102, 102));
+        numberTextField2.setToolTipText("");
+        numberTextField2.setMargin(new java.awt.Insets(5, 10, 5, 10));
+        getContentPane().add(numberTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 200, 220, -1));
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel8.setText("Estatus");
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 170, 220, 30));
+
+        numberTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numberTextField3.setForeground(new java.awt.Color(102, 102, 102));
+        numberTextField3.setToolTipText("");
+        numberTextField3.setMargin(new java.awt.Insets(5, 10, 5, 10));
+        getContentPane().add(numberTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 200, 220, -1));
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel9.setText("Modus operandi");
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 220, 30));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setBorder(null);
+        jTextArea1.setMargin(new java.awt.Insets(5, 10, 5, 10));
+        jScrollPane1.setViewportView(jTextArea1);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, 450, -1));
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel11.setText("Irregularidad");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 390, 220, 30));
+
+        numberTextField4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numberTextField4.setForeground(new java.awt.Color(102, 102, 102));
+        numberTextField4.setToolTipText("");
+        numberTextField4.setMargin(new java.awt.Insets(5, 10, 5, 10));
+        getContentPane().add(numberTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 220, -1));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel10.setText("Subirregularidad");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 390, 220, 30));
+
+        numberTextField5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        numberTextField5.setForeground(new java.awt.Color(102, 102, 102));
+        numberTextField5.setToolTipText("");
+        numberTextField5.setMargin(new java.awt.Insets(5, 10, 5, 10));
+        getContentPane().add(numberTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, 220, -1));
+
+        newCaseButton1.setBackground(new java.awt.Color(0, 153, 255));
+        newCaseButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        newCaseButton1.setForeground(new java.awt.Color(255, 255, 255));
+        newCaseButton1.setText("Guardar");
+        newCaseButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        newCaseButton1.setFocusPainted(false);
+        newCaseButton1.setInheritsPopupMenu(true);
+        newCaseButton1.setMargin(new java.awt.Insets(5, 16, 5, 16));
+        newCaseButton1.setRequestFocusEnabled(false);
+        newCaseButton1.setRolloverEnabled(false);
+        getContentPane().add(newCaseButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 500, 150, -1));
+
+        exitButton2.setBackground(new java.awt.Color(255, 51, 51));
+        exitButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        exitButton2.setForeground(new java.awt.Color(255, 255, 255));
+        exitButton2.setText("Cancelar");
+        exitButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exitButton2.setFocusPainted(false);
+        exitButton2.setInheritsPopupMenu(true);
+        exitButton2.setMargin(new java.awt.Insets(5, 16, 5, 16));
+        exitButton2.setRequestFocusEnabled(false);
+        exitButton2.setRolloverEnabled(false);
+        getContentPane().add(exitButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 500, 150, -1));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -91,19 +204,19 @@ public class DashboardInterface extends javax.swing.JFrame {
             }
         });
 
-        exitButton1.setBackground(new java.awt.Color(255, 51, 51));
-        exitButton1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        exitButton1.setForeground(new java.awt.Color(255, 255, 255));
-        exitButton1.setText("Salir");
-        exitButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        exitButton1.setFocusPainted(false);
-        exitButton1.setInheritsPopupMenu(true);
-        exitButton1.setMargin(new java.awt.Insets(5, 16, 5, 16));
-        exitButton1.setRequestFocusEnabled(false);
-        exitButton1.setRolloverEnabled(false);
-        exitButton1.addActionListener(new java.awt.event.ActionListener() {
+        exitButton.setBackground(new java.awt.Color(255, 51, 51));
+        exitButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        exitButton.setForeground(new java.awt.Color(255, 255, 255));
+        exitButton.setText("Salir");
+        exitButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exitButton.setFocusPainted(false);
+        exitButton.setInheritsPopupMenu(true);
+        exitButton.setMargin(new java.awt.Insets(5, 16, 5, 16));
+        exitButton.setRequestFocusEnabled(false);
+        exitButton.setRolloverEnabled(false);
+        exitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                exitButton1ActionPerformed(evt);
+                exitButtonActionPerformed(evt);
             }
         });
 
@@ -145,7 +258,7 @@ public class DashboardInterface extends javax.swing.JFrame {
                 .addGap(39, 39, 39)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(newUserButton, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(exitButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(exitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(newCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(username, javax.swing.GroupLayout.DEFAULT_SIZE, 310, Short.MAX_VALUE)
@@ -165,7 +278,7 @@ public class DashboardInterface extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(newCaseButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
-                .addComponent(exitButton1)
+                .addComponent(exitButton)
                 .addGap(28, 28, 28))
         );
 
@@ -183,24 +296,39 @@ public class DashboardInterface extends javax.swing.JFrame {
         
     }//GEN-LAST:event_newUserButtonActionPerformed
 
-    private void exitButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButton1ActionPerformed
+    private void exitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitButtonActionPerformed
         mainClass.exit();
-    }//GEN-LAST:event_exitButton1ActionPerformed
+    }//GEN-LAST:event_exitButtonActionPerformed
 
     private void newCaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newCaseButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_newCaseButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton exitButton1;
+    private javax.swing.JButton exitButton;
+    private javax.swing.JButton exitButton2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JLabel logoLabel;
     private javax.swing.JButton newCaseButton;
+    private javax.swing.JButton newCaseButton1;
     private javax.swing.JButton newUserButton;
     private javax.swing.JTextField numberTextField;
+    private javax.swing.JTextField numberTextField1;
+    private javax.swing.JTextField numberTextField2;
+    private javax.swing.JTextField numberTextField3;
+    private javax.swing.JTextField numberTextField4;
+    private javax.swing.JTextField numberTextField5;
     private javax.swing.JLabel username;
     private javax.swing.JLabel usertype;
     // End of variables declaration//GEN-END:variables
