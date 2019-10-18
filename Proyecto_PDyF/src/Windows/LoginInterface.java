@@ -5,6 +5,7 @@ package Windows;
  */
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.ImageIcon;
 import proyecto_pdyf.Proyecto_PDyF;
 
 public class LoginInterface extends javax.swing.JFrame {
@@ -17,6 +18,7 @@ public class LoginInterface extends javax.swing.JFrame {
     public LoginInterface(Proyecto_PDyF mainClass) {
         this.mainClass = mainClass;
         initComponents();
+        this.setIconImage(new ImageIcon(getClass().getResource("../Images/logo-100x100.png")).getImage());
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
     }
@@ -44,7 +46,6 @@ public class LoginInterface extends javax.swing.JFrame {
         setTitle("Login");
         setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         setMinimumSize(new java.awt.Dimension(400, 600));
-        setPreferredSize(new java.awt.Dimension(300, 600));
         setResizable(false);
         setSize(new java.awt.Dimension(300, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -92,7 +93,7 @@ public class LoginInterface extends javax.swing.JFrame {
         loginButton.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Entrar");
-        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         loginButton.setFocusPainted(false);
         loginButton.setInheritsPopupMenu(true);
         loginButton.setMargin(new java.awt.Insets(5, 16, 5, 16));
